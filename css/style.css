@@ -1,0 +1,19 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url(../font/Inter-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url(../font/Inter-Bold.ttf);
+  font-weight: 700;
+}
+
