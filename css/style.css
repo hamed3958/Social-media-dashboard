@@ -54,6 +54,7 @@ body.active .top-bg {
   row-gap: 46px;
   width: 1110px;
   margin-top: 36px;
+  justify-content: space-around;
 }
 
 .top-container {
@@ -81,6 +82,18 @@ body.active .top-bg {
   font-size: 14px;
   line-height: 17px;
   color: #63687d;
+}
+
+.line {
+  width: 326px;
+  height: 1px;
+  background: #848bab;
+  display: none;
+  margin-top: 24px;
+}
+
+body.active .line{
+  background: #333A55;
 }
 
 .top-right {
@@ -421,4 +434,236 @@ body.active .bot-boxes:hover {
   -webkit-transition: background 1000ms linear;
   -ms-transition: background 1000ms linear;
   transition: background 1000ms ease-in;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body.active .attribution{
+  color: #8c98c6;
+}
+
+/**************media query**********************/
+
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+
+  .top-bg {
+    height: 244px;
+    width: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 115px 936px 1168px;
+    row-gap: 46px;
+    width: 375px;
+    margin: 16px 0;
+  }
+
+  .top-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-left {
+    height: 29px;
+    width: 326px;
+    text-align: left;
+  }
+
+  .top-left > h2 {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+  }
+
+  .line {
+    display: inline;
+  }
+
+  .top-right {
+    width: 326px;
+    height: 24px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mid-container {
+    display: grid;
+    grid-template-rows: repeat(4, 216px);
+    grid-template-columns: auto;
+    row-gap: 24px;
+    height: auto;
+    justify-content: space-evenly;
+  }
+
+  .mid-boxes {
+    width: 326px;
+  }
+
+  .bot-container {
+    display: grid;
+    grid-template-rows: 40px repeat(8, 125px);
+    grid-template-columns: auto;
+    row-gap: 16px;
+    justify-content: space-evenly;
+  }
+
+  .bot-top-box {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 29px;
+    width: 209px;
+  }
+
+  .bot-boxes {
+    height: 125px;
+    width: 326px;
+  }
+
+  .bot-box1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .bot-box2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .bot-box3 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .bot-box4 {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+
+  .bot-box5 {
+    grid-row: 6/7;
+    grid-column: 1/2;
+  }
+
+  .bot-box6 {
+    grid-row: 7/8;
+    grid-column: 1/2;
+  }
+
+  .bot-box7 {
+    grid-row: 8/9;
+    grid-column: 1/2;
+  }
+
+  .bot-box8 {
+    grid-row: 9/10;
+    grid-column: 1/2;
+  }
+
+  .attribution {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1115px) {
+  body {
+    height: auto;
+  }
+
+  .top-bg {
+    height: 244px;
+    width: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 115px 468px 584px;
+    row-gap: 46px;
+    width: 555px;
+    margin: 16px 0;
+    row-gap: 46px;
+  }
+
+  .mid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 216px);
+    grid-template-columns: repeat(2, 255px);
+    row-gap: 24px;
+    height: auto;
+    justify-content: space-evenly;
+  }
+
+  .bot-container {
+    display: grid;
+    grid-template-rows: 40px repeat(8, 125px);
+    grid-template-columns: 255px 255px;
+    row-gap: 16px;
+    justify-content: space-evenly;
+  }
+
+  .bot-top-box {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 29px;
+    width: 209px;
+  }
+
+  .bot-box1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .bot-box2 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .bot-box3 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .bot-box4 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .bot-box5 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .bot-box6 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+
+  .bot-box7 {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+
+  .bot-box8 {
+    grid-row: 5/6;
+    grid-column: 2/3;
+  }
+
+  .attribution {
+    margin-top: 26px;
+  }
 }
