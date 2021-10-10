@@ -161,6 +161,10 @@ body.active .top-right > p {
   transition: 0.5s;
 }
 
+body.active .mid-boxes {
+  background: #252b42;
+}
+
 .mid-boxes-icon-holder,
 .green,
 .red {
@@ -186,6 +190,10 @@ body.active .top-right > p {
   white-space: nowrap;
 }
 
+body.active .mid-boxes-icon-holder > p {
+  color: #8c98c6;
+}
+
 .mid-boxes-number-holder {
   display: flex;
   flex-flow: column;
@@ -201,6 +209,10 @@ body.active .top-right > p {
   color: #1d1f29;
 }
 
+body.active .mid-boxes-number-holder > h2 {
+  color: #ffffff;
+}
+
 .mid-boxes-number-holder > p {
   font-weight: 400;
   font-size: 12px;
@@ -210,6 +222,10 @@ body.active .top-right > p {
   text-transform: uppercase;
   color: #63687d;
   margin-top: 9px;
+}
+
+body.active .mid-boxes-number-holder > p {
+  color: #8c98c6;
 }
 
 .triangle {
@@ -288,6 +304,10 @@ body.active .top-right > p {
   color: #63687d;
 }
 
+body.active .bot-top-box > p {
+  color: #ffffff;
+}
+
 .bot-boxes {
   display: flex;
   flex-flow: column nowrap;
@@ -299,6 +319,10 @@ body.active .top-right > p {
   border-radius: 5px;
   padding: 26px 31px 19px 24px;
   transition: 0.5s;
+}
+
+body.active .bot-boxes {
+  background: #252b42;
 }
 
 .bot-boxes-icon-holder,
@@ -317,6 +341,10 @@ body.active .top-right > p {
   color: #63687d;
 }
 
+body.active .bot-boxes-icon-holder > p {
+  color: #8c98c6;
+}
+
 .bot-box1 {
   grid-row: 2/3;
   grid-column: 1/2;
@@ -328,6 +356,10 @@ body.active .top-right > p {
   font-size: 32px;
   line-height: 39px;
   color: #1d1f29;
+}
+
+body.active .bot-last-num {
+  color: #ffffff;
 }
 
 .bot-green,
@@ -374,6 +406,14 @@ body.active .top-right > p {
 .bot-boxes:hover {
   background: #e1e4f0;
   cursor: pointer;
+}
+
+body.active .mid-boxes:hover {
+  background: #333a55;
+}
+
+body.active .bot-boxes:hover {
+  background: #333a55;
 }
 
 #toggle:hover {
