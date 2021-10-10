@@ -28,8 +28,7 @@ Users should be able to:
 ![Social-media-dashboard](images/Social-media-dashboard.jpg)
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Social media dashboard URL](https://hamed3958.github.io/Social-media-dashboard/)
 
 ## My process
 
