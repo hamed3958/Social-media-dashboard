@@ -24,7 +24,7 @@ toggle.onclick = function () {
 //---------------number counter----------------------//
 
 const counters = document.querySelectorAll('.value');
-const speed = 72;
+const speed = 100;
 
 counters.forEach(counter => {
   const update = () => {
