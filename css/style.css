@@ -92,8 +92,8 @@ body.active .top-bg {
   margin-top: 24px;
 }
 
-body.active .line{
-  background: #333A55;
+body.active .line {
+  background: #333a55;
 }
 
 .top-right {
@@ -121,7 +121,9 @@ body.active .line{
   background-color: #aeb3cb;
   border-radius: 12px;
   cursor: pointer;
-  transition: 0.5s;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
 }
 
 .indicator {
@@ -429,11 +431,24 @@ body.active .bot-boxes:hover {
   background: #333a55;
 }
 
-#toggle:hover {
+#toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(225deg, #40db82 0%, #388fe7 98.02%);
-  -webkit-transition: background 1000ms linear;
-  -ms-transition: background 1000ms linear;
-  transition: background 1000ms ease-in;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+#toggle:hover::before {
+  opacity: 1;
+}
+
+#toggle.active:hover::before {
+  background: #f1f3fa;
 }
 
 .attribution {
@@ -444,7 +459,7 @@ body.active .bot-boxes:hover {
   color: hsl(228, 45%, 44%);
 }
 
-body.active .attribution{
+body.active .attribution {
   color: #8c98c6;
 }
 
