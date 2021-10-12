@@ -20,3 +20,26 @@ toggle.onclick = function () {
 
   localStorage.setItem("theme", theme);
 }
+
+//---------------number counter----------------------//
+
+const counters = document.querySelectorAll('.value');
+const speed = 72;
+
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('targetNum');
+    const data = +counter.innerText;
+
+    const time = target / speed;
+    if (data < target) {
+      counter.innerText = Math.ceil(data + time);
+      setTimeout(update, 1);
+    } else {
+      counter.innerText = target;
+    }
+
+  }
+
+  update();
+});
