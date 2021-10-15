@@ -90,24 +90,32 @@ toggle.onclick = function () {
 Animated Number Counter :
 
 ```js
-const counters = document.querySelectorAll(".value");
-const speed = 72;
+document.addEventListener('readystatechange', event => {
+  if (event.target.readyState === "complete") {
+    setTimeout(() => {
+      const counters = document.querySelectorAll('.value');
 
-counters.forEach((counter) => {
-  const update = () => {
-    const target = +counter.getAttribute("targetNum");
-    const data = +counter.innerText;
-
-    const time = target / speed;
-    if (data < target) {
-      counter.innerText = Math.ceil(data + time);
-      setTimeout(update, 1);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  update();
+      counters.forEach(counter => {
+        const update = () => {
+          const target = +counter.getAttribute('targetNum');
+          var x = () => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const progress = Math.min((timestamp - startTimestamp) / 2000, 1);
+              counter.innerHTML = Math.floor(progress * target);
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              }
+            };
+            window.requestAnimationFrame(step);
+          }
+          x();
+        }
+        update();
+      });
+    }, 1000)
+  }
 });
 ```
 
