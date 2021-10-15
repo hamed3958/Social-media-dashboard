@@ -482,7 +482,7 @@ body.active .attribution {
 }
 
 .anime {
-  animation: update 2s 1 linear;
+  animation: update 3s 1 linear;
 }
 
 /**************media query**********************/
